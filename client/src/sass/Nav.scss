@@ -1,0 +1,114 @@
+@use './vars.scss' as *;
+
+nav.thumb {
+   background-color: $bg-color;
+    height: 100vh;
+    opacity: 95%;
+    padding-top: 25%;
+    position: fixed;
+    top: -150%;
+    transition: top 700ms ease;
+    width: 100%;
+    z-index: 2;
+
+    ul {
+        height: 40vh;
+        a {
+            border-bottom: 2px solid transparent;
+            color: white;
+            font-size: 2.5em;
+           padding: 0 2rem;
+
+            &:hover {
+                border-bottom: 2px solid $text-p;
+            }
+        }
+    }
+    .icon-container {
+        margin-top: 8rem;
+
+        img {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .hamburger {
+        align-items: flex-end;
+        
+        height: 24px;
+        position: fixed;
+        right: 1.2rem;
+        top: 1.2rem;
+      
+        div {
+            background-color: white;
+            border-radius: 4px 0 0 4px;
+            height: 3px;
+            transition: all 700ms ease;
+            width: 24px;
+
+            &:nth-of-type(2) {
+                width: 16px;
+            }
+            &:nth-of-type(3) {
+                width: 36px;
+            }
+        }
+       
+
+        &:hover {
+            cursor: pointer;
+         }
+    }
+}
+nav {
+    padding: 1rem 0;
+    position: fixed;
+    transition: background-color 400ms ease;
+    width: 100%;
+    z-index: 2;
+
+    ul {
+        a {
+            border-bottom: 2px solid transparent;
+            color: white;
+            font-size: 1.5em;
+            margin: 0 2rem;
+
+            &:hover {
+                border-bottom: 2px solid $text-p;
+            }
+        }
+    }
+    .icon-container {
+        img {
+            margin: 0 2rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+.active {
+    div {
+        background-color: $text-p !important;
+        border-radius: 4px !important;
+        width: 42px !important;
+        &:nth-of-type(1) {
+            transform: translateY(11px) rotate(45deg);
+        }
+        &:nth-of-type(2) {
+            transform: rotate(-45deg);
+        }
+        &:nth-of-type(3) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+    }
+}
+.show {
+    top: 0 !important;
+}
+.nav-bg {
+   background-color: rgba(84, 102, 168,.95);
+}

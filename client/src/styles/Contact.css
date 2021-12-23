@@ -1,0 +1,52 @@
+form {
+  margin-top: 1rem;
+  max-width: 400px;
+  width: 65%;
+}
+form input, form textarea, form button {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  margin: 0.5rem 0;
+  outline: none;
+  padding: 0.5rem;
+  width: 100%;
+}
+form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder, form button::-webkit-input-placeholder {
+  color: #bcc3df;
+}
+form input::-moz-placeholder, form textarea::-moz-placeholder, form button::-moz-placeholder {
+  color: #bcc3df;
+}
+form input::placeholder, form textarea::placeholder, form button::placeholder {
+  color: #bcc3df;
+}
+form input:focus:not(button), form textarea:focus:not(button), form button:focus:not(button) {
+  box-shadow: 1.5px 1.5px 0 0 white;
+}
+form h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+form textarea {
+  height: 120px;
+  resize: none;
+}
+form button {
+  color: white;
+  font-size: 1.2em;
+  font-weight: 300;
+  padding: 0.15rem 1.6rem;
+  text-align: center;
+  transition: all 200ms ease;
+  width: auto;
+}
+form button:hover {
+  box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+/*# sourceMappingURL=Contact.css.map */

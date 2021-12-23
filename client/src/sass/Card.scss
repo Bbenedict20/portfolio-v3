@@ -1,0 +1,114 @@
+@use './vars.scss' as *;
+
+.card {
+    
+    margin-bottom: 8rem;
+    max-width: 500px;
+
+    h2 {
+        font-size: 1.2em;
+        font-weight: 500;
+        margin-bottom: .5rem;
+        margin-top: 2rem;
+    }
+    img {
+        margin: 0 .5rem;
+    }
+    .react {
+        animation: spin 10s linear infinite;
+    }
+    @keyframes spin {
+        from {
+            transform: rotate(0);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    .image {
+        display: grid;
+        grid-template-areas:
+        ". . ."
+        ". . ."
+        "live . git";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 280px;
+        margin-top: 1rem;
+      
+        width: 85%;
+
+        #live {
+            @extend %btn;
+
+            align-self: flex-end;
+            font-size: 1em;
+            font-weight: 600;
+            grid-area: live;
+            justify-self: center;
+            margin: 0 .5rem;
+            padding: .55rem .4rem;
+            width: 100px;
+        }
+        #git {
+            @extend %btn;
+
+            align-self: flex-end;
+            grid-area: git;
+            justify-self: center;
+            padding: 0 .6rem;
+            width: 100px;
+        }
+       .bg-img {
+            border-radius: 8px;
+            height: 280px;
+            margin: 0;
+            margin-top: .5rem;
+            max-width: 450px;
+            object-fit: cover;
+            position: absolute;
+            width: 85%;
+        }
+    }
+    .textbox {
+        font-size: 1em;
+        height: 150px;
+        margin-top: 1rem;
+        overflow-x: hidden;
+        padding: 0 .5rem;
+        width: 80%;
+        p {
+            font-weight: 200;
+        }
+
+        &::-webkit-scrollbar {
+            background-color: $bg-color;
+            width: 12px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: darken($bg-color, 8%);
+            border-radius: 12px;
+        }
+    }
+}
+
+@media (min-width: 361px) {
+    .card {
+        .image {
+            #git {
+                width: 110px;
+            }
+            #live {
+                font-size: 1.2em;
+                padding: .6rem 1rem;
+                width: 110px;
+            }
+        }
+    }
+}
+@media(min-width: 761px) {
+    .card {
+        margin: 0 1rem;
+        margin-bottom: 8rem;
+    }
+}
