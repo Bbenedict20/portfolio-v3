@@ -1,7 +1,7 @@
 @use './vars.scss' as *;
 
 form {
-    margin-top: 1rem;
+    margin-top: .5rem;
     max-width: 400px;
     width: 65%;
 
@@ -38,6 +38,10 @@ form {
         height: 120px;
         resize: none;
     }
+    p {
+        color: white;
+        opacity: 0;
+    }
     button {
         color: white;
         font-size: 1.2em;
@@ -53,4 +57,13 @@ form {
            transform: translateY(-2px);
         }
     }
+}
+.missing {
+    border: 1px solid red !important;
+    &:focus {
+        box-shadow: 1.5px 1.5px 0 0 red;
+    }
+}
+.show-text {
+    opacity: 1 !important;
 }

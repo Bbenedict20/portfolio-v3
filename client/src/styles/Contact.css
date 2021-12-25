@@ -1,5 +1,5 @@
 form {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   max-width: 400px;
   width: 65%;
 }
@@ -34,6 +34,10 @@ form textarea {
   height: 120px;
   resize: none;
 }
+form p {
+  color: white;
+  opacity: 0;
+}
 form button {
   color: white;
   font-size: 1.2em;
@@ -47,6 +51,17 @@ form button:hover {
   box-shadow: 0 5px 6px 1px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transform: translateY(-2px);
+}
+
+.missing {
+  border: 1px solid red !important;
+}
+.missing:focus {
+  box-shadow: 1.5px 1.5px 0 0 red;
+}
+
+.show-text {
+  opacity: 1 !important;
 }
 
 /*# sourceMappingURL=Contact.css.map */
